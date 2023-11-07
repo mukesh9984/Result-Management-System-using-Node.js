@@ -1,0 +1,25 @@
+
+
+body {
+    /* Set the background image */
+    background-image: url('signup.jpg');
+    
+    /* Specify how the background image should be displayed */
+    background-size: cover; /* This will cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fixed background image */
+    background-position: center; /* Center the image horizontally and vertically */
+    
+    /* Set a background color as a fallback in case the image is unavailable */
+    background-color: #f0f0f0;
+    
+    /* Set other CSS properties as needed */
+    /* For example, you might want to specify a background color or text styles */
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+

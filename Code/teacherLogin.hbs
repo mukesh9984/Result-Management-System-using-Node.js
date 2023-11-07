@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #E8F5E9;">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="font-weight: bold; color: #4CAF50;">Result Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutUs" style="color: #4CAF50;">About Us</a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        {{#if alertMessage}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{alertMessage}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Teacher Login
+                    </div>
+                    <div class="card-body">
+                        <form action="/teacherLogin" method="POST">
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Email address</label>
+                                <input name="email" type="email" class="form-control" id="inputEmail"
+                                    placeholder="Enter email" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email address.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword" class="form-label">Password</label>
+                                <input name="password" type="password" class="form-control" id="inputPassword"
+                                    placeholder="Password" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-secondary btn-block">Login</button>
+                            <button type="button" class="btn btn-primary" id="signupStudentButton">Signup</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <h3>Login via</h3>
+                        <div class="social-icons">
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-facebook"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#exampleModal").modal("show");
+
+            // Get a reference to the "Signup" button
+            const signupButton = document.getElementById('signupStudentButton');
+
+            // Add a click event listener to the button
+            signupButton.addEventListener('click', () => {
+                // Redirect to the /teacherSignup route when the button is clicked
+                window.location.href = '/teacherSignup';
+            });
+        });
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-light mt-5 fixed-bottom" style="background-color: #E8F5E9;">
+        <div class="container" style="max-width: 200px;"> <!-- Adjust the max-width as needed -->
+            <a class="navbar-brand" href="#" style="font-weight: bold; color: #4CAF50;">@copyright Nagarro</a>
+        </div>
+    </nav>
+
+
+
+</body>
+
+</html>
